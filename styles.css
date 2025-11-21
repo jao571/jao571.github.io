@@ -1,0 +1,221 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /* Remova background-color: #000; e quaisquer outras propriedades de background */
+    /* Estas propriedades são importantes para o posicionamento do pseudo-elemento */
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh; /* Garante que o body ocupe a altura total */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff; /* Cor do texto principal */
+}
+
+/* Pseudo-elemento para a imagem de background desfocada */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i.ibb.co/GfycF7Hz/9830817a89e3693edb9f87c56f481448.jpg); /* SUBSTITUA AQUI */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    filter: blur(5px); /* Nível de desfoque, ajuste conforme preferir */
+    z-index: -1; /* Coloca o background atrás do conteúdo */
+    background-color: #000; /* Fallback para garantir um fundo escuro */
+}
+
+/* Ajustes para o conteúdo ficar legível sobre o fundo desfocado */
+.profile-container {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    /* Adicione um background semi-transparente para melhorar a leitura */
+    background-color: rgba(0, 0, 0, 1); /* Fundo preto 50% transparente */
+    padding: 15px;
+    border-radius: 80px;
+    z-index: 1; /* Garante que este contêiner fique acima do background */
+    
+    
+    
+}
+
+.username, .description {
+    color: #fff; /* Garante que o texto principal seja branco */
+    
+}
+
+.social-icons a {
+    color: #fff;
+    /* ... */
+}
+
+.link-button {
+    /* Mantenha o background-color: #222; ou ajuste para um rgba() */
+    background-color: rgba(34, 34, 34, 0.85); /* Exemplo com transparência */
+    border: 1px solid rgba(51, 51, 51, 0.85);
+    /* ... */
+    z-index: 1; /* Garante que os botões fiquem acima do background */
+}
+
+.link-button:hover {
+    background-color: rgba(51, 51, 51, 0.95);
+    /* ... */
+}
+
+/* O restante do seu CSS continua igual */
+/* ... */
+
+
+
+.profile-container {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative; /* Para posicionar o ícone de configurações */
+    width: 100%; /* Ocupa a largura total para posicionar o ícone */
+}
+
+.settings-icon {
+    position: absolute;
+    top: -100px; /* Ajuste conforme necessário */
+    left: 100px; /* Ajuste conforme necessário */
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.profile-pic {
+    width: 80px; /* Tamanho da imagem reduzido conforme referência */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid; /* Sem borda na imagem de perfil */
+    border-color: white;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-size: 1.5em; /* Ajuste o tamanho da fonte */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    text-shadow: none; /* Remover sombra do texto */
+}
+
+.description {
+    font-size: 0.9em;
+    color: #fff; /* Cor cinza mais clara para a descrição */
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-top: 15px;
+    margin-bottom: 30px; /* Espaço maior antes dos botões de link */
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.8em; /* Tamanho dos ícones sociais */
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #666; /* Cor levemente mais clara ao passar o mouse */
+}
+
+.link-list {
+    width: 90%;
+    max-width: 400px; /* Largura máxima ajustada para os botões */
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 15px; /* Espaço entre os botões */
+}
+
+.link-button {
+    display: flex; /* Para alinhar texto e ícone de opções */
+    justify-content: space-between; /* Espaço entre o texto e o ícone */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%;
+    padding: 15px 20px; /* Padding ajustado */
+    background-color: #222; /* Cor cinza escuro para os botões */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px; /* Cantos arredondados */
+    font-size: 1.05em;
+    font-weight: 500; /* Peso da fonte um pouco mais leve */
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* Remover sombra dos botões */
+    border: 1px solid #333; /* Borda sutil */
+}
+
+.link-button:hover {
+    background-color: #333; /* Cor ligeiramente mais clara ao passar o mouse */
+    transform: none; /* Remover elevação */
+    box-shadow: none; /* Remover sombra ao passar o mouse */
+}
+
+.link-options-icon {
+    font-size: 0.8em; /* Tamanho do ícone de três pontos */
+    color: #aaa; /* Cor cinza para o ícone */
+}
+
+/* Remover estilo 'special' se não for mais necessário um botão destacado */
+.link-button.special {
+    background-color: #222; /* Manter a mesma cor para consistência com o estilo */
+    border: 1px solid #333;
+}
+
+.link-button.special:hover {
+    background-color: #333;
+}
+
+.footer-cta {
+    margin-top: 50px; /* Espaço entre os links e o botão do rodapé */
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: block;
+    padding: 12px 25px;
+    background-color: #fff; /* Fundo branco para o CTA */
+    color: #000; /* Texto preto para o CTA */
+    text-decoration: none;
+    border-radius: 25px; /* Botão bem arredondado */
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #eee;
+}
+
+.footer-links {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: border;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+  }
+  
