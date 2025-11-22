@@ -1,2 +1,2 @@
 # thevoxx.github.io
-just a personal project
+This is a personal website project; please do not alter the code. 
